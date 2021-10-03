@@ -1,11 +1,15 @@
+import { Router, Switch, Route } from "react-router";
 import "./App.css";
-
-import AllComponentPageCombine from "./Component/Pages/AllComponentPageCombine/AllComponentPageCombine";
+import HomePage from "./Component/Pages/HomePage";
+import ProductsPage from "./Component/Pages/ProductsPage/ProductsPage";
 
 function App() {
   return (
     <div className="App">
-      <AllComponentPageCombine />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/Product:ProductsId" component={ProductsPage} />
+      </Switch>
     </div>
   );
 }
